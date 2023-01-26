@@ -7,8 +7,8 @@ import Buttons from './Buttons';
 import Form from './Form';
 
 const tasks = [
-  { id: 1, content: 'zrobić zakupy', done: false },
-  { id: 2, content: 'zjeść kolację', done: true },
+  { id: 1, content: 'zrobić zakupy', done: true },
+  { id: 2, content: 'zjeść kolację', done: false },
 ];
 let hideDoneTasks = false;
 
