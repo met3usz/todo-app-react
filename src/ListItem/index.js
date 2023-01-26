@@ -6,7 +6,7 @@ const ListItem = ({ task, hide }) => (
     className={`list__item ${task.done && hide ? 'list__item--hiden' : ''}`}
   >
     <button className="list__item__button list__item__button-done">
-      {task.done ? '✔️' : ''}
+      <p>{task.done ? '✔️' : ''}</p>
     </button>
     <p
       className={`list__item__content 
@@ -15,7 +15,9 @@ const ListItem = ({ task, hide }) => (
     >
       {task.content}
     </p>
-    <button className="list__item__button list__item__button-remove">🗑️</button>
+    <button className="list__item__button list__item__button-remove">
+      <p>🗑️</p>
+    </button>
   </li>
 );
 
