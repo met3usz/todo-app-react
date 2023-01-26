@@ -7,7 +7,7 @@ const tasks = [
   { id: 1, content: 'zrobić zakupy', done: false },
   { id: 2, content: 'zjeść kolację', done: true },
 ];
-let hideDoneTasks = true;
+let hideDoneTasks = false;
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
       </div>
       <section className="section">
         <h2 className="section__title">Lista zadań</h2>
-        <Buttons tasks={tasks} />
+        <Buttons tasks={tasks} hide={hideDoneTasks} />
         <List tasks={tasks} hide={hideDoneTasks} />
       </section>
     </main>

@@ -1,0 +1,17 @@
+.button__button {
+  outline: none;
+  background-color: transparent;
+  border: none;
+  color: hsl(187, 100%, 23%);
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.button__button:hover {
+  color: hsl(187, 100%, 35%);
+}
+
+.button__button:disabled {
+  color: hsl(0, 0%, 65%);
+  cursor: default;
+}
