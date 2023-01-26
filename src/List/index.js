@@ -1,22 +1,20 @@
 import './style.css';
 import './listItem.css';
 
-const List = (props) => (
+const List = ({ tasks, hide }) => (
   <ul className="list">
-    {props.tasks.map((task) => (
+    {tasks.map((task) => (
       <li
         key={task.id}
-        className={`list__item ${
-          task.done && props.hideDoneTask ? 'list__item--hiden' : ''
-        }`}
+        className={`list__item ${task.done && hide ? 'list__item--hiden' : ''}`}
       >
         <button className="list__item__button list__item__button-done">
           {task.done ? '✔️' : ''}
         </button>
         <p
-          className={`"list__item__content" ${
-            task.done ? 'style = "text-decoration: line-through"' : ''
-          }`}
+          className={`list__item__content 
+            ${task.done ? 'list__item--lineThrough' : ''}
+          `}
         >
           {task.content}
         </p>
