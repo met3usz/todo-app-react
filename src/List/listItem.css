@@ -1,0 +1,44 @@
+.list__item {
+  padding: 5px;
+  margin: 5px 0;
+  border-bottom: 1px solid #ccc;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 10px;
+}
+
+.list__item--hiden {
+  display: none;
+}
+
+.list__item__button {
+  color: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.list__item__button-done {
+  background-color: rgb(23 112 28);
+}
+
+.list__item__button-done:hover {
+  background-color: rgb(23, 160, 27);
+}
+
+.list__item__button-remove {
+  background-color: rgb(233, 28, 58);
+}
+
+.list__item__button-remove:hover {
+  background-color: rgb(233, 80, 58);
+}
+
+.list__item__content {
+  margin: 0 20px;
+}
