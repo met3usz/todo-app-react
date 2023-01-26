@@ -1,7 +1,10 @@
 import './App.css';
-import Form from './Form';
+import Container from './Container';
+import Wrapper from './Wrapper';
+import Section from './Section';
 import List from './List';
 import Buttons from './Buttons';
+import Form from './Form';
 
 const tasks = [
   { id: 1, content: 'zrobić zakupy', done: false },
@@ -11,18 +14,15 @@ let hideDoneTasks = false;
 
 function App() {
   return (
-    <main>
-      <div className="wrapper">
-        <h1>Lista zadań</h1>
-        <h2 className="wrapper__header">Dodaj nowe zadanie</h2>
-        <Form />
-      </div>
-      <section className="section">
-        <h2 className="section__title">Lista zadań</h2>
-        <Buttons tasks={tasks} hide={hideDoneTasks} />
-        <List tasks={tasks} hide={hideDoneTasks} />
-      </section>
-    </main>
+    <Container>
+      <Wrapper body={<Form />} title={'Lista zadań'} />
+      <Section
+        tasks={tasks}
+        hideDoneTasks={hideDoneTasks}
+        contentControlButtons={<Buttons tasks={tasks} hide={hideDoneTasks} />}
+        tasksList={<List tasks={tasks} hide={hideDoneTasks} />}
+      />
+    </Container>
   );
 }
 
