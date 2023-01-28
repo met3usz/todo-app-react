@@ -1,5 +1,7 @@
 import './style.css';
 
+const deleteTask = (name) => console.log(`Nazwa zadania do usunięcia: ${name}`);
+
 const ListItem = ({ task, hide }) => (
   <li
     key={task.id}
@@ -15,7 +17,10 @@ const ListItem = ({ task, hide }) => (
     >
       {task.content}
     </p>
-    <button className="list__item__button list__item__button-remove">
+    <button
+      className="list__item__button list__item__button-remove"
+      onClick={() => deleteTask(task.content)}
+    >
       <p>🗑️</p>
     </button>
   </li>
