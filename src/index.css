@@ -9,8 +9,8 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Lato', sans-serif;
   padding: 20px;
   word-break: break-word;
-  background-color: rgb(238, 238, 238);
+  background-color: hsl(0, 0%, 93%);
 }

@@ -1,7 +1,7 @@
 .list__item {
   padding: 5px;
   margin: 5px 0;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid hsl(0, 0%, 80%);
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
@@ -16,7 +16,7 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: hsl(0, 0%, 100%);
   width: 35px;
   height: 35px;
   border-radius: 0;
@@ -27,19 +27,19 @@
 }
 
 .list__item__button-done {
-  background-color: rgb(23 112 28);
+  background-color: hsl(123, 66%, 26%);
 }
 
 .list__item__button-done:hover {
-  background-color: rgb(23, 160, 27);
+  background-color: hsl(122, 75%, 36%);
 }
 
 .list__item__button-remove {
-  background-color: rgb(233, 28, 58);
+  background-color: hsl(351, 82%, 51%);
 }
 
 .list__item__button-remove:hover {
-  background-color: rgb(233, 80, 58);
+  background-color: hsl(8, 80%, 57%);
 }
 
 .list__item__content {
