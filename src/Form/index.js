@@ -3,7 +3,7 @@ import './style.css';
 const Form = () => (
   <form className="form">
     <input
-      autofocus
+      autoFocus
       className="form__input"
       placeholder="Co jest do zrobienia?"
     />
