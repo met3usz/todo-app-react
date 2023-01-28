@@ -4,10 +4,6 @@ import Section from './Section';
 import List from './List';
 import Buttons from './Buttons';
 import Form from './Form';
-import { hello as hey, name } from './utils/hello';
-
-hey();
-console.log(name);
 
 const tasks = [
   { id: 1, content: 'zrobić zakupy', done: false },
