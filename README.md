@@ -1,5 +1,6 @@
 # ToDo App with React
 
+DEMO APP: [ToDo App React](https://met3usz.github.io/todo-app-react/)
 This is a simple ToDo App created with React. You can add your task, mark it done or delete it. But there is more! When you add your tasks, you can choose to mark all task done and hide it - it's really awesome!
 
 Disclaimer: Some of the functionality might not be working yet because the app is still in development.
