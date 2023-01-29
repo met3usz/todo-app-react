@@ -28,6 +28,9 @@ function App() {
     );
   };
 
+  const setAllDone = () =>
+    setTasks((tasks) => tasks.map((tasks) => ({ ...tasks, done: true })));
+
   return (
     <Container>
       <Wrapper body={<Form />} title={'Lista zadań'} />
@@ -35,7 +38,12 @@ function App() {
         tasks={tasks}
         hideDone={hideDone}
         contentControlButtons={
-          <Buttons tasks={tasks} hideDone={hideDone} toggleHide={toggleHide} />
+          <Buttons
+            tasks={tasks}
+            hideDone={hideDone}
+            toggleHide={toggleHide}
+            setAllDone={setAllDone}
+          />
         }
         tasksList={
           <List
