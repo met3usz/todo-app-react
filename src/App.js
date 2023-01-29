@@ -8,11 +8,7 @@ import Form from './Form';
 
 function App() {
   let [hideDone, setHide] = useState(false);
-  let [tasks, setTasks] = useState([
-    { id: 1, content: 'zrobić zakupy', done: false },
-    { id: 2, content: 'zjeść kolację', done: true },
-    { id: 3, content: 'iść spać wcześnie', done: false },
-  ]);
+  let [tasks, setTasks] = useState([]);
 
   const toggleHide = () => setHide((hideDone) => !hideDone);
   const removeTask = (id) =>
