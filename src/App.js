@@ -11,7 +11,7 @@ const tasks = [
   { id: 3, content: 'iść spać wcześnie', done: false },
 ];
 
-let hideDoneTasks = false;
+let hideDone = false;
 
 function App() {
   return (
@@ -19,9 +19,9 @@ function App() {
       <Wrapper body={<Form />} title={'Lista zadań'} />
       <Section
         tasks={tasks}
-        hideDoneTasks={hideDoneTasks}
-        contentControlButtons={<Buttons tasks={tasks} hide={hideDoneTasks} />}
-        tasksList={<List tasks={tasks} hide={hideDoneTasks} key={tasks.id} />}
+        hideDone={hideDone}
+        contentControlButtons={<Buttons tasks={tasks} hide={hideDone} />}
+        tasksList={<List tasks={tasks} hide={hideDone} key={tasks.id} />}
       />
     </Container>
   );
