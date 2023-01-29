@@ -31,9 +31,20 @@ function App() {
   const setAllDone = () =>
     setTasks((tasks) => tasks.map((tasks) => ({ ...tasks, done: true })));
 
+  const addNewTask = (content) => {
+    setTasks((tasks) => [
+      ...tasks,
+      {
+        content,
+        done: false,
+        id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1,
+      },
+    ]);
+  };
+
   return (
     <Container>
-      <Wrapper body={<Form />} title={'Lista zadań'} />
+      <Wrapper body={<Form addNewTask={addNewTask} />} title={'Lista zadań'} />
       <Section
         tasks={tasks}
         hideDone={hideDone}
