@@ -1,8 +1,6 @@
 import './style.css';
 
-const deleteTask = (name) => console.log(`Nazwa zadania do usunięcia: ${name}`);
-
-const ListItem = ({ task, hideDone }) => (
+const ListItem = ({ task, hideDone, removeTask }) => (
   <li
     key={task.id}
     className={`list__item ${task.done && hideDone ? 'list__item--hiden' : ''}`}
@@ -19,7 +17,7 @@ const ListItem = ({ task, hideDone }) => (
     </p>
     <button
       className="list__item__button list__item__button-remove"
-      onClick={() => deleteTask(task.content)}
+      onClick={() => removeTask(task.id)}
     >
       <p>🗑</p>
     </button>

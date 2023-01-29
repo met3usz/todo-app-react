@@ -6,15 +6,17 @@ import List from './List';
 import Buttons from './Buttons';
 import Form from './Form';
 
-const tasks = [
-  { id: 1, content: 'zrobić zakupy', done: false },
-  { id: 2, content: 'zjeść kolację', done: true },
-  { id: 3, content: 'iść spać wcześnie', done: false },
-];
-
 function App() {
   let [hideDone, setHide] = useState(false);
+  const [tasks, setTasks] = useState([
+    { id: 1, content: 'zrobić zakupy', done: false },
+    { id: 2, content: 'zjeść kolację', done: true },
+    { id: 3, content: 'iść spać wcześnie', done: false },
+  ]);
+
   const toggleHide = () => setHide((hideDone) => !hideDone);
+  const removeTask = (id) =>
+    setTasks((tasks) => tasks.filter((task) => task.id !== id));
 
   return (
     <Container>
@@ -25,7 +27,14 @@ function App() {
         contentControlButtons={
           <Buttons tasks={tasks} hideDone={hideDone} toggleHide={toggleHide} />
         }
-        tasksList={<List tasks={tasks} hideDone={hideDone} key={tasks.id} />}
+        tasksList={
+          <List
+            tasks={tasks}
+            hideDone={hideDone}
+            key={tasks.id}
+            removeTask={removeTask}
+          />
+        }
       />
     </Container>
   );
