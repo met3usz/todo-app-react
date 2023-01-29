@@ -8,7 +8,7 @@ import Form from './Form';
 
 function App() {
   let [hideDone, setHide] = useState(false);
-  const [tasks, setTasks] = useState([
+  let [tasks, setTasks] = useState([
     { id: 1, content: 'zrobić zakupy', done: false },
     { id: 2, content: 'zjeść kolację', done: true },
     { id: 3, content: 'iść spać wcześnie', done: false },
@@ -17,6 +17,16 @@ function App() {
   const toggleHide = () => setHide((hideDone) => !hideDone);
   const removeTask = (id) =>
     setTasks((tasks) => tasks.filter((task) => task.id !== id));
+  const toggleTaskDone = (id) => {
+    setTasks((tasks) =>
+      tasks.map((task) => {
+        if (task.id === id) {
+          return { ...task, done: !task.done };
+        }
+        return task;
+      })
+    );
+  };
 
   return (
     <Container>
@@ -33,6 +43,7 @@ function App() {
             hideDone={hideDone}
             key={tasks.id}
             removeTask={removeTask}
+            toggleTaskDone={toggleTaskDone}
           />
         }
       />

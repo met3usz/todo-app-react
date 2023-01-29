@@ -1,11 +1,14 @@
 import './style.css';
 
-const ListItem = ({ task, hideDone, removeTask }) => (
+const ListItem = ({ task, hideDone, removeTask, toggleTaskDone }) => (
   <li
     key={task.id}
     className={`list__item ${task.done && hideDone ? 'list__item--hiden' : ''}`}
   >
-    <button className="list__item__button list__item__button-done">
+    <button
+      onClick={() => toggleTaskDone(task.id)}
+      className="list__item__button list__item__button-done"
+    >
       <p>{task.done ? '✓' : ''}</p>
     </button>
     <p
