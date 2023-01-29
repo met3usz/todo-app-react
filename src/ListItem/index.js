@@ -2,10 +2,10 @@ import './style.css';
 
 const deleteTask = (name) => console.log(`Nazwa zadania do usunięcia: ${name}`);
 
-const ListItem = ({ task, hide }) => (
+const ListItem = ({ task, hideDone }) => (
   <li
     key={task.id}
-    className={`list__item ${task.done && hide ? 'list__item--hiden' : ''}`}
+    className={`list__item ${task.done && hideDone ? 'list__item--hiden' : ''}`}
   >
     <button className="list__item__button list__item__button-done">
       <p>{task.done ? '✓' : ''}</p>

@@ -1,12 +1,12 @@
 import React from 'react';
 import './style.css';
 
-const Buttons = ({ tasks, hide }) => (
+const Buttons = ({ tasks, hideDone }) => (
   <div className="buttons">
     {tasks.length > 0 && (
       <>
         <button className="button__button">
-          {hide ? 'Pokaż' : 'Ukryj'} wykonane
+          {hideDone ? 'Pokaż' : 'Ukryj'} wykonane
         </button>
         <button
           className="button__button"

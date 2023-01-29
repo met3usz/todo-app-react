@@ -1,10 +1,10 @@
 import ListItem from '../ListItem';
 import './style.css';
 
-const List = ({ tasks, hide }) => (
+const List = ({ tasks, hideDone }) => (
   <ul className="list">
     {tasks.map((task) => (
-      <ListItem task={task} hide={hide} key={task.id} />
+      <ListItem task={task} hideDone={hideDone} key={task.id} />
     ))}
   </ul>
 );
