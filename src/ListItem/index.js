@@ -9,7 +9,7 @@ const ListItem = ({ task, hideDone, removeTask, toggleTaskDone }) => (
       onClick={() => toggleTaskDone(task.id)}
       className="list__item__button list__item__button-done"
     >
-      <p>{task.done ? '✓' : ''}</p>
+      <p>{task.done ? '\u2713' : ''}</p>
     </button>
     <p
       className={`list__item__content 
@@ -22,7 +22,7 @@ const ListItem = ({ task, hideDone, removeTask, toggleTaskDone }) => (
       className="list__item__button list__item__button-remove"
       onClick={() => removeTask(task.id)}
     >
-      <p>🗑</p>
+      <p>{'\uD83D\uDDD1'}</p>
     </button>
   </li>
 );
