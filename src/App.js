@@ -10,9 +10,14 @@ function App() {
   let [hideDone, setHide] = useState(false);
   let [tasks, setTasks] = useState([]);
 
-  const toggleHide = () => setHide((hideDone) => !hideDone);
-  const removeTask = (id) =>
-    setTasks((tasks) => tasks.filter((task) => task.id !== id));
+  const toggleHide = () => {
+    setHide((hideDone) => !hideDone);
+  };
+  const removeTask = (id) => {
+    setTasks((tasks) => {
+      tasks.filter((task) => task.id !== id);
+    });
+  };
   const toggleTaskDone = (id) => {
     setTasks((tasks) =>
       tasks.map((task) => {
