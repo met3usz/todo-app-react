@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Container from './Container';
 import Wrapper from './Wrapper';
 import Section from './Section';
@@ -6,18 +6,26 @@ import List from './List';
 import Buttons from './Buttons';
 import Form from './Form';
 
+const localeTasks = JSON.parse(localStorage.getItem('tasks'));
+
 function App() {
-  let [hideDone, setHide] = useState(false);
-  let [tasks, setTasks] = useState([]);
+  const [hideDone, setHide] = useState(false);
+  const [tasks, setTasks] = useState([] || localeTasks);
+
+  useEffect(() => {
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+  }, [tasks]);
 
   const toggleHide = () => {
     setHide((hideDone) => !hideDone);
   };
+
   const removeTask = (id) => {
     setTasks((tasks) => {
       tasks.filter((task) => task.id !== id);
     });
   };
+
   const toggleTaskDone = (id) => {
     setTasks((tasks) =>
       tasks.map((task) => {
