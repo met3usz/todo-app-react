@@ -6,9 +6,8 @@ import List from './List';
 import Buttons from './Buttons';
 import Form from './Form';
 
-const localeTasks = JSON.parse(localStorage.getItem('tasks'));
-
 function App() {
+  const localeTasks = JSON.parse(localStorage.getItem('tasks'));
   const [hideDone, setHide] = useState(false);
   const [tasks, setTasks] = useState([] || localeTasks);
 
@@ -21,9 +20,7 @@ function App() {
   };
 
   const removeTask = (id) => {
-    setTasks((tasks) => {
-      tasks.filter((task) => task.id !== id);
-    });
+    setTasks((tasks) => tasks.filter((task) => task.id !== id));
   };
 
   const toggleTaskDone = (id) => {
