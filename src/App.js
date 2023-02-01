@@ -8,7 +8,9 @@ import Form from './Form';
 
 function App() {
   const [hideDone, setHide] = useState(false);
-  const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem('tasks')));
+  const [tasks, setTasks] = useState(
+    JSON.parse(localStorage.getItem('tasks') || [])
+  );
 
   useEffect(() => {
     localStorage.setItem('tasks', JSON.stringify(tasks));
