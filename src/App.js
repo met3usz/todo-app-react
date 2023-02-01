@@ -5,6 +5,7 @@ import Section from './Section';
 import List from './List';
 import Buttons from './Buttons';
 import Form from './Form';
+import { useTasks } from './utils/useTasks';
 
 const getLocalStorageTasks = () => {
   const localStorageTasks = localStorage.getItem('tasks');
