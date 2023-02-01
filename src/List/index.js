@@ -1,8 +1,8 @@
-import ListItem from '../ListItem';
-import './style.css';
+import ListItem from './ListItem';
+import { ListWrapper } from './styled';
 
 const List = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
-  <ul className="list">
+  <ListWrapper>
     {tasks.map((task) => (
       <ListItem
         task={task}
@@ -12,7 +12,7 @@ const List = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
         toggleTaskDone={toggleTaskDone}
       />
     ))}
-  </ul>
+  </ListWrapper>
 );
 
 export default List;

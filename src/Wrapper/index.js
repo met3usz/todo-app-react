@@ -1,11 +1,11 @@
-import './style.css';
+import { TitleWrapper } from './styled';
 
 const Wrapper = ({ body, title }) => (
-  <div className="wrapper">
+  <TitleWrapper>
     <h1>{title}</h1>
     <h2 className="wrapper__header">Dodaj nowe zadanie</h2>
     {body}
-  </div>
+  </TitleWrapper>
 );
 
 export default Wrapper;

@@ -1,11 +1,11 @@
-import './style.css';
+import { Title, Wrapper } from './styled';
 
 const Section = ({ contentControlButtons, tasksList }) => (
-  <section className="section">
-    <h2 className="section__title">Lista zadań</h2>
+  <Wrapper>
+    <Title>Lista zadań</Title>
     {contentControlButtons}
     {tasksList}
-  </section>
+  </Wrapper>
 );
 
 export default Section;
