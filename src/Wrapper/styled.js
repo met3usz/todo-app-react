@@ -5,3 +5,7 @@ export const TitleWrapper = styled.div`
   padding: 20px;
   margin-bottom: 0;
 `;
+
+export const Title = styled.h1`
+  margin-top: 0px;
+`;

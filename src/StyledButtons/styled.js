@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
+export const StyledButtons = styled.div`
   padding: 20px;
   margin-top: 0;
   align-self: center;

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.form`
+export const StyldeForm = styled.form`
   background-color: hsl(0, 0%, 100%);
   display: grid;
   grid-template-columns: 1fr auto;
@@ -34,6 +34,6 @@ export const Button = styled.button`
 
   &:hover {
     background-color: hsl(187, 100%, 35%);
-    transform: scaleX(1.02);
+    transform: scale(1.05);
   }
 `;

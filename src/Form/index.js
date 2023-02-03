@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import { Button, Input, Wrapper } from './styled';
+import { Button, Input, StyldeForm } from './styled';
 
 const Form = ({ addNewTask }) => {
   const [newTaskContent, setContent] = useState('');
@@ -15,7 +15,7 @@ const Form = ({ addNewTask }) => {
   };
 
   return (
-    <Wrapper onSubmit={onFormSubmit}>
+    <StyldeForm onSubmit={onFormSubmit}>
       <Input
         ref={inputRef}
         value={newTaskContent}
@@ -24,7 +24,7 @@ const Form = ({ addNewTask }) => {
         onChange={({ target }) => setContent(target.value)}
       />
       <Button onClick={() => inputRef.current.focus()}>Dodaj zadanie</Button>
-    </Wrapper>
+    </StyldeForm>
   );
 };
 

@@ -1,8 +1,8 @@
-import { TitleWrapper } from './styled';
+import { Title, TitleWrapper } from './styled';
 
 const Wrapper = ({ body, title }) => (
   <TitleWrapper>
-    <h1>{title}</h1>
+    <Title>{title}</Title>
     <h2>Dodaj nowe zadanie</h2>
     {body}
   </TitleWrapper>

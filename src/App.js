@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { useTasks } from './utils/useTasks';
-import Container from './Container';
+import { Container } from './Container/styled';
 import Wrapper from './Wrapper';
 import Section from './Section';
 import List from './List';
-import Buttons from './Buttons';
+import StyledButtons from './StyledButtons';
 import Form from './Form';
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
         tasks={tasks}
         hideDone={hideDone}
         contentControlButtons={
-          <Buttons
+          <StyledButtons
             tasks={tasks}
             hideDone={hideDone}
             toggleHide={toggleHide}

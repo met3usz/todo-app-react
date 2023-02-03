@@ -28,24 +28,20 @@ export const Button = styled.button`
   outline: none;
   cursor: pointer;
   transition: 0.5s ease;
+`;
 
-  ${({ done }) =>
-    done &&
-    css`
-      background-color: hsl(123, 66%, 26%);
-      &:hover {
-        background-color: hsl(122, 75%, 36%);
-      }
-    `}
+export const ToggleDoneButton = styled(Button)`
+  background-color: hsl(123, 66%, 26%);
+  &:hover {
+    background-color: hsl(122, 75%, 36%);
+  }
+`;
 
-  ${({ remove }) =>
-    remove &&
-    css`
-      background-color: hsl(351, 82%, 51%);
-      &:hover {
-        background-color: hsl(8, 80%, 57%);
-      }
-    `}
+export const RemoveButton = styled(Button)`
+  background-color: hsl(351, 82%, 51%);
+  &:hover {
+    background-color: hsl(8, 80%, 57%);
+  }
 `;
 
 export const Content = styled.p`
