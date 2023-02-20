@@ -1,46 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { Provider } from 'react-redux';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import { configureStore } from '@reduxjs/toolkit';
 import { App } from './App';
-
-const initialState = {
-  tasks: [],
-};
-
-const tasksReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case 'addTask':
-      return {
-        ...state,
-        tasks: [...state.tasks, { content: action.payload }],
-      };
-    default:
-      return state;
-  }
-};
-
-const addTask = (content) => ({
-  type: 'addTask',
-  payload: content,
-});
-
-const selectTasks = ({ tasks }) => tasks;
-
-const store = configureStore({ reducer: tasksReducer });
-console.log(selectTasks(store.getState()));
-
-store.dispatch(addTask('zadanie 1'));
-console.log(selectTasks(store.getState()));
-
-store.dispatch(addTask('zadanie 2'));
-console.log(selectTasks(store.getState()));
+import store from './store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>
 );
 
