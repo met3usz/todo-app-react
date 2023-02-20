@@ -1,21 +1,15 @@
 import ListItem from './ListItem';
-import { useSelector } from 'react-redux';
 import { ListWrapper } from './styled';
+import { useSelector } from 'react-redux';
 import { selectTasks } from '../tasksSlice';
 
-const List = ({ removeTask, toggleTaskDone }) => {
+const List = () => {
   const { tasks, hideDone } = useSelector(selectTasks);
 
   return (
     <ListWrapper>
       {tasks.map((task) => (
-        <ListItem
-          task={task}
-          hideDone={hideDone}
-          key={task.id}
-          removeTask={removeTask}
-          toggleTaskDone={toggleTaskDone}
-        />
+        <ListItem task={task} hideDone={hideDone} key={task.id} />
       ))}
     </ListWrapper>
   );
