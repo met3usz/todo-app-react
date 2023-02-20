@@ -21,6 +21,7 @@ export const Button = styled.button`
   color: hsl(187, 100%, 23%);
   cursor: pointer;
   transition: 0.5s ease;
+  margin: 0 5px;
 
   &:hover {
     color: hsl(187, 100%, 35%);
