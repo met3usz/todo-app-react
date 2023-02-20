@@ -6,7 +6,7 @@ const ListItem = ({ task, hideDone }) => {
   const dispatch = useDispatch();
 
   return (
-    <Item key={task.id} hiden={task.done && hideDone}>
+    <Item hiden={task.done && hideDone}>
       <ToggleDoneButton onClick={() => dispatch(toggleTaskDone(task.id))}>
         <p>{task.done ? '\u2713' : ''}</p>
       </ToggleDoneButton>
