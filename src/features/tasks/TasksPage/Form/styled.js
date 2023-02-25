@@ -5,20 +5,13 @@ export const StyldeForm = styled.form`
   display: grid;
   grid-template-columns: 1fr auto;
   grid-gap: 10px;
-  border-top: 1px solid hsl(0, 0%, 80%);
-  padding: 20px;
+  padding: 0 20px 20px 20px;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     grid-gap: 10px;
   }
-`;
-
-export const Input = styled.input`
-  border: 1px solid hsl(0, 0%, 80%);
-  padding: 5px;
-  overflow: auto;
 `;
 
 export const Button = styled.button`
