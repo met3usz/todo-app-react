@@ -1,7 +1,12 @@
-import { ToggleDoneButton, RemoveButton, Content, Item } from './styled';
+import {
+  ToggleDoneButton,
+  RemoveButton,
+  Content,
+  Item,
+  StyledLink,
+} from './styled';
 import { removeTask, toggleTaskDone } from '../../../tasksSlice';
 import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
 
 const ListItem = ({ task, hideDone }) => {
   const dispatch = useDispatch();
@@ -12,7 +17,7 @@ const ListItem = ({ task, hideDone }) => {
         <p>{task.done ? '\u2713' : ''}</p>
       </ToggleDoneButton>
       <Content done={task.done}>
-        <Link to={`/zadania/${task.id}`}>{task.content}</Link>
+        <StyledLink to={`/zadania/${task.id}`}>{task.content}</StyledLink>
       </Content>
       <RemoveButton
         onClick={() => {

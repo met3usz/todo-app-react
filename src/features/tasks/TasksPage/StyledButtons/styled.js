@@ -6,7 +6,7 @@ export const StyledButtons = styled.div`
   align-self: center;
   justify-self: flex-end;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;

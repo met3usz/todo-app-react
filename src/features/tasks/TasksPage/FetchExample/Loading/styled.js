@@ -4,12 +4,13 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   margin: 0;
   padding: 0;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     padding-top: 20px;
+    justify-content: center;
   }
 `;
 

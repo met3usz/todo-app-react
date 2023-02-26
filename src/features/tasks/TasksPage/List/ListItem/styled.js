@@ -1,9 +1,10 @@
+import { Link } from 'react-router-dom';
 import styled, { css } from 'styled-components';
 
 export const Item = styled.li`
   padding: 5px;
   margin: 5px 0;
-  border-bottom: 1px solid hsl(0, 0%, 80%);
+  border-bottom: 1px solid ${({ theme }) => theme.color.gray};
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
@@ -20,7 +21,7 @@ export const Button = styled.button`
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  color: hsl(0, 0%, 100%);
+  color: ${({ theme }) => theme.color.white};
   width: 35px;
   height: 35px;
   border-radius: 0;
@@ -31,16 +32,16 @@ export const Button = styled.button`
 `;
 
 export const ToggleDoneButton = styled(Button)`
-  background-color: hsl(123, 66%, 26%);
+  background-color: ${({ theme }) => theme.color.green};
   &:hover {
-    background-color: hsl(122, 75%, 36%);
+    background-color: ${({ theme }) => theme.color.greenHover};
   }
 `;
 
 export const RemoveButton = styled(Button)`
-  background-color: hsl(351, 82%, 51%);
+  background-color: ${({ theme }) => theme.color.red};
   &:hover {
-    background-color: hsl(8, 80%, 57%);
+    background-color: ${({ theme }) => theme.color.redHover};
   }
 `;
 
@@ -52,4 +53,14 @@ export const Content = styled.p`
     css`
       text-decoration: line-through;
     `}
+`;
+
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: ${({ theme }) => theme.color.teal};
+  transition: 0.5s ease;
+
+  &:hover {
+    color: ${({ theme }) => theme.color.tealHover};
+  }
 `;

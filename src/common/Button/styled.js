@@ -4,17 +4,17 @@ export const Button = styled.button`
   outline: none;
   background-color: transparent;
   border: none;
-  color: hsl(187, 100%, 23%);
+  color: ${({ theme }) => theme.color.teal};
   cursor: pointer;
   transition: 0.5s ease;
   margin: 0 5px;
 
   &:hover {
-    color: hsl(187, 100%, 35%);
+    color: ${({ theme }) => theme.color.tealHover};
   }
 
   &:disabled {
-    color: hsl(0, 0%, 65%);
+    color: ${({ theme }) => theme.color.disabled};
     cursor: default;
   }
 `;

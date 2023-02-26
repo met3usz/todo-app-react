@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 export const StyledNavLink = styled(NavLink)`
   text-decoration: none;
-  color: hsl(0, 0%, 100%);
+  color: ${({ theme }) => theme.color.white};
   font-size: 18px;
 
   &.active {
@@ -17,17 +17,17 @@ export const List = styled.ul`
   justify-content: center;
   gap: 20px;
   list-style-type: none;
-  background-color: hsl(187, 100%, 23%);
+  background-color: ${({ theme }) => theme.color.teal};
   padding: 20px;
   margin: 0;
 `;
 
 export const ListItem = styled.li`
   transition: 0.5s ease;
-  color: hsl(187, 100%, 23%);
+  color: ${({ theme }) => theme.color.teal};
 
   &:hover {
-    color: hsl(0, 0%, 100%);
+    color: ${({ theme }) => theme.color.white};
     text-decoration: underline;
     transform: scale(1.05);
   }

@@ -14,6 +14,6 @@ html {
 body {
   font-family: 'Poppins', sans-serif;
   word-break: break-word;
-  background-color: hsl(0, 0%, 93%);
+  background-color: ${({ theme }) => theme.color.bgColor};
 }
 `;

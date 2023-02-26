@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.section`
-  background-color: hsl(0, 0%, 100%);
+  background-color: ${({ theme }) => theme.color.white};
   padding: 0;
   margin-top: 15px;
   display: grid;
@@ -9,7 +9,7 @@ export const Wrapper = styled.section`
     'title buttons'
     'list list';
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     display: flex;
     flex-direction: column;
   }

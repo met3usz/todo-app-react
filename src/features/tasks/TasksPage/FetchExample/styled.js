@@ -5,7 +5,7 @@ export const StyledParagraph = styled.p`
   padding: 0;
   text-align: right;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     padding-top: 20px;
     text-align: center;
   }
