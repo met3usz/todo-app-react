@@ -22,7 +22,7 @@ function* fetchExampleTasksHandler() {
     yield put(fetchExampleTasksSuccess(exampleTasks));
   } catch (error) {
     yield put(fetchExampleTasksFail());
-    yield call(error, 'Coś nie tak O_o');
+    yield call(alert, 'Coś poszło nie tak O_o');
   }
 }
 
