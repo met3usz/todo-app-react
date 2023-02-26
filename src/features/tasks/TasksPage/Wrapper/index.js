@@ -1,11 +1,14 @@
 import { SecondTitle, Title, TitleWrapper } from './styled';
 
-const Wrapper = ({ body, title, header }) => (
+const Wrapper = ({ body, title, header, fetchExample }) => (
   <>
     <Title>{title}</Title>
 
     <TitleWrapper>
-      <SecondTitle>{header}</SecondTitle>
+      <div>
+        <SecondTitle>{header}</SecondTitle>
+        {fetchExample}
+      </div>
       {body}
     </TitleWrapper>
   </>

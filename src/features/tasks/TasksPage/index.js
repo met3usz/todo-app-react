@@ -5,6 +5,7 @@ import List from './List';
 import StyledButtons from './StyledButtons';
 import Form from './Form';
 import Search from './Search';
+import FetchExample from './FetchExample';
 
 function TasksPage() {
   return (
@@ -12,6 +13,7 @@ function TasksPage() {
       <Wrapper
         title={'Lista zadań'}
         header={'Dodaj nowe zadanie'}
+        fetchExample={<FetchExample />}
         body={<Form />}
       />
       <Wrapper header={'Wyszukiwarka'} body={<Search />} />
