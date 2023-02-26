@@ -1,3 +1,6 @@
+import { createGlobalStyle } from 'styled-components';
+
+export const GlobalStyle = createGlobalStyle`
 html {
   box-sizing: border-box;
 }
@@ -13,3 +16,4 @@ body {
   word-break: break-word;
   background-color: hsl(0, 0%, 93%);
 }
+`;
