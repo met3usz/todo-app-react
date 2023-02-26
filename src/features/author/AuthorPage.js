@@ -1,10 +1,10 @@
 import { Container } from '../../common/Container/styled';
-import Wrapper from '../tasks/TasksPage/Wrapper';
+import Header from '../tasks/TasksPage/Header';
 
 function Author() {
   return (
     <Container>
-      <Wrapper
+      <Header
         body={
           <>
             <p>

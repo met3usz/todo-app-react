@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { Container } from '../../../common/Container/styled';
-import Wrapper from '../../tasks/TasksPage/Wrapper';
+import Header from '../../tasks/TasksPage/Header';
 import { getTaskById } from '../tasksSlice';
 
 function TaskPage() {
@@ -10,7 +10,7 @@ function TaskPage() {
 
   return (
     <Container>
-      <Wrapper
+      <Header
         title={'Szczegóły zadania'}
         header={task ? task.content : 'Nie znaleziono zadania 😢'}
         body={

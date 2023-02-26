@@ -1,5 +1,5 @@
 import { Container } from '../../../common/Container/styled';
-import Wrapper from './Wrapper';
+import Header from './Header';
 import Section from './Section';
 import List from './List';
 import StyledButtons from './StyledButtons';
@@ -10,13 +10,13 @@ import FetchExample from './FetchExample';
 function TasksPage() {
   return (
     <Container>
-      <Wrapper
+      <Header
         title={'Lista zadań'}
         header={'Dodaj nowe zadanie'}
         fetchExample={<FetchExample />}
         body={<Form />}
       />
-      <Wrapper header={'Wyszukiwarka'} body={<Search />} />
+      <Header header={'Wyszukiwarka'} body={<Search />} />
       <Section contentControlButtons={<StyledButtons />} tasksList={<List />} />
     </Container>
   );
