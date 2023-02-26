@@ -14,7 +14,7 @@ function Author() {
             </p>
             <p>
               Lubię <em>japońską</em> motoryzacją oraz interesuję się
-              <em>fotografią</em>.
+              <em> fotografią</em>.
             </p>
             <p>
               Pasjonuję się rówież układaniem kostek <strong>Rubika.</strong>
