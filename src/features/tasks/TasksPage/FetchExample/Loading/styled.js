@@ -7,6 +7,10 @@ export const Wrapper = styled.div`
   justify-content: center;
   margin: 0;
   padding: 0;
+
+  @media (max-width: 768px) {
+    padding-top: 20px;
+  }
 `;
 
 export const StyledParagraph = styled.p`

@@ -4,7 +4,7 @@ import { StyledParagraph, Wrapper } from './styled';
 const Loading = () => {
   return (
     <Wrapper>
-      <TailSpin width="20" height="20" color="hsl(187,100%,23%)" />
+      <TailSpin width="18" height="18" color="hsl(187,100%,23%)" />
       <StyledParagraph> Ładowanie...</StyledParagraph>
     </Wrapper>
   );
