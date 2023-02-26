@@ -53,7 +53,7 @@ export const {
   removeTask,
   setAllDone,
   fetchExampleTasks,
-  fetchExampleTasksSucces,
+  fetchExampleTasksSuccess,
   fetchExampleTasksFail,
 } = tasksSlice.actions;
 
