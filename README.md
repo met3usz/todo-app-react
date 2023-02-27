@@ -3,10 +3,12 @@
 
 DEMO APP: [ToDo App React](https://met3usz.github.io/todo-app-react/)
 
-This is a simple ToDo App created with React. You can add your task, mark it done or delete it. But there is more! When you add your tasks, you can choose to mark all task done and hide it - it's really awesome! ~~And your tasks will be stored in your local storage even when you refresh the page!~~
+This is a simple ToDo App created with React. You can add your task, mark it done or delete it. But there is more! When you add your tasks, you can choose to mark all task done and hide it - it's really awesome! And your tasks will be stored in your local storage even when you refresh the page. Also there is a About Me page!
 
-![ToDo App React - wide](https://i.imgur.com/k91mb1g.gif)
-![ToDo App React - mobile](https://imgur.com/wuTlRsd.png)
+![ToDo App React - wide](https://i.imgur.com/tdEvMlP.gif)
+![ToDo App React - mobile v1](https://imgur.com/PV3juc1.png)
+![ToDo App React - mobile v2](https://imgur.com/Tui2DYj.png)
+
 
 ## Tools used in the project
 
