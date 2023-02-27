@@ -1,6 +1,5 @@
-import Input from '../Input';
 import searchQueryParamName from '../searchQueryParamName';
-import { SearchWrapper } from './styled';
+import { SearchWrapper, Input } from './styled';
 import {
   useQueryParameters,
   useReplaceQueryParameters,
