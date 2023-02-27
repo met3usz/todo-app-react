@@ -7,7 +7,7 @@ export const StyldeForm = styled.form`
   grid-gap: 10px;
   padding: 0 20px 20px 20px;
 
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     grid-gap: 10px;
