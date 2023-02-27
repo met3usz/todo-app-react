@@ -9,15 +9,12 @@ function Author() {
           <>
             <p>
               <strong>Hej! </strong>
-              Aktualnie jestem studentem pierwszego roku na
-              <b> Uniwersytecie Marii Curie-Skłodowskiej w Lublinie</b>
+              Aktualnie uczę się
+              <b> Reacta </b> razem z całą społecznością <b>You</b>Code!
             </p>
             <p>
-              Lubię <em>japońską</em> motoryzacją oraz interesuję się
+              Lubię <em>japońską</em> motoryzację oraz interesuję się
               <em> fotografią</em>.
-            </p>
-            <p>
-              Pasjonuję się rówież układaniem kostek <strong>Rubika.</strong>
             </p>
           </>
         }
